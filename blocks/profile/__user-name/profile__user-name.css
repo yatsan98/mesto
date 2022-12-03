@@ -1,0 +1,8 @@
+.profile__user-name {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.14;
+  color: #fff;
+  margin: 62px 0 0;
+  grid-area: user-name;
+}

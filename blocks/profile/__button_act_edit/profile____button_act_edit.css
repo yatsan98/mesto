@@ -1,0 +1,9 @@
+.profile__button_act_edit {
+  width: 24px;
+  height: 24px;
+  background-image: url('../../../images/icon-edit.svg');
+  background-size: 10px;
+  border: 1px solid #fff;
+  grid-area: edit-button;
+  margin: 77px 0 0;
+}

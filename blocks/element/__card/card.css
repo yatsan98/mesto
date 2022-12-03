@@ -1,0 +1,5 @@
+.element__card {
+  width: 282px;
+  grid-area: card;
+  border-radius: 10px 10px 0 0;
+}

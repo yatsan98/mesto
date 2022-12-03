@@ -1,0 +1,12 @@
+.element__card-like {
+  background-image: url('../../../images/icon_like.svg');
+  width: 22px;
+  height: 19px;
+  border: none;
+  margin: 31px 18px 0 0;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-self: end;
+  grid-area: like;
+}

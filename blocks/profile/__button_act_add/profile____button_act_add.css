@@ -1,0 +1,10 @@
+.profile__button_act_add {
+  width: 150px;
+  height: 50px;
+  background-image: url('../../../images/icon_add.svg');
+  background-size: 22px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  grid-area: add-button;
+  margin: 75px auto;
+}

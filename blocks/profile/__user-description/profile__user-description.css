@@ -1,0 +1,8 @@
+.profile__user-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  grid-area: descr;
+  padding-top: 16px;
+  margin: 0;
+}
