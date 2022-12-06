@@ -1,3 +1,7 @@
 .profile__info {
-  
+  display: grid;
+  grid-template-areas: "user-name edit-button" "descr .";
+  grid-template-columns:  1fr min-content;
+  gap: 18px;
+  align-items: baseline;
 }

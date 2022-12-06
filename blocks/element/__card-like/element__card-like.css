@@ -9,4 +9,15 @@
   background-repeat: no-repeat;
   justify-self: end;
   grid-area: like;
+  transition: .7s ease;
+}
+
+.element__card-like:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.element__card-like:active {
+  opacity: 1;
+  background-image: url('../../../images/icon_like_active.svg');
 }
