@@ -1,5 +1,5 @@
 .element {
-  width: 100%;
+  width: 282px;
   min-height: 361px;
   border-radius: 10px;
   background-color: #fff;
@@ -7,10 +7,11 @@
   grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr min-content;
   grid-template-areas: "card card" "text like";
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .element {
-    max-width: 282px;
+    flex-direction: column;
   }
 }

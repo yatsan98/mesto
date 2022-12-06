@@ -1,5 +1,13 @@
 .element__card {
-  width: 282px;
+  max-width: 282px;
   grid-area: card;
   border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .element__card {
+    width: 100ph;
+  }
 }

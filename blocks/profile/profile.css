@@ -1,37 +1,17 @@
 .profile {
   max-width: 880px;
   margin: 0 auto;
-  display: grid;
-  grid-template-areas: "avatar user-name edit-profile add-button" 
-  "avatar descr . add-button";
-  grid-template-columns: 150px 312px 1fr 150px;
-  grid-template-rows: 72px 1fr;
+  padding: 40px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-@media screen and (max-width: 740px) {
-	.profile {
-		grid-template-areas: 
-		"avatar user-name edit-profile"
-		"avatar descr edit-profile"
-		"add-button add-button add-button";
-		grid-template-columns: 150px 312px 1fr;
-		grid-template-rows: 90px 30px 70px;
-		max-width: 581px;
-		height: 190px;
-	}
-}
-
 
 @media screen and (max-width: 680px) {
 	.profile {
-		width: 282px;
-		height: 286px;
-		grid-template-areas: 
-		"avatar avatar avatar"
-		"null user-name edit-profile"
-		"descr descr descr"
-		"add-button add-button add-button";
-		grid-template-columns: 1fr 189px 1fr;
-		grid-template-rows: 140px 1fr 1fr 50px;
+		flex-direction: column;
+    padding: 42px 0 36px;
+    width: 90%;
 	}
 }
+

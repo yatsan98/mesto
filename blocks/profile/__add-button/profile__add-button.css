@@ -5,12 +5,19 @@
   background-size: 22px;
   border: 2px solid #fff;
   box-sizing: border-box;
-  grid-area: add-button;
-  margin: 75px auto;
+  margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .profile__add-button {
-    margin: 36px auto 36px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 535px) {
+  .profile__add-button {
+    max-width: 282px;
   }
 }

@@ -7,4 +7,5 @@
   position: relative;
   color: #fff;
   font-family: 'Inter', 'Tahoma', sans-serif;
+  text-rendering: optimizeLegibility;
 }
