@@ -3,13 +3,15 @@
   width: 22px;
   height: 19px;
   border: none;
-  margin: 31px 18px 0 0;
+  margin-right: 18px;
+  padding: 0;
   background-color: #fff;
   background-size: contain;
   background-repeat: no-repeat;
   justify-self: end;
   grid-area: like;
   transition: .7s ease;
+  box-sizing: border-box;
 }
 
 .element__card-like:hover {

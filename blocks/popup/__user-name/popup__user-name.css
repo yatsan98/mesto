@@ -9,11 +9,12 @@
 	width: 100%;
 	outline: none;
 	font-size: 14px;
+	line-height: 17px;
 }
 
 @media (max-width: 580px) {
 	.popup__user-name {
 		max-width: 238px;
-		margin-top: 74px;
+		margin-top: 75px;
 	}
 }
