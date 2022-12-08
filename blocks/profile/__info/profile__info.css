@@ -7,10 +7,13 @@
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .profile__info {
-    grid-template-areas: "null null user-name edit-profile" "null null descr descr";
-    margin: 26px auto 36px;
+    margin: 25px auto 17px;
     column-gap: 10px;
-  } 
-}
+    width: 282px;
+    grid-template-areas: "null user-name edit-profile" "descr descr descr";
+    grid-template-columns: 1fr 189px 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+} 

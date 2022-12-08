@@ -6,7 +6,9 @@
   border: 1px solid #fff;
   grid-area: edit-profile;
   margin: auto;
+  margin-right: 20px;
 }
+
 
 @media screen and (max-width: 535px) {
   .profile__edit-profile {
