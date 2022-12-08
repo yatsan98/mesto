@@ -11,8 +11,8 @@
 }
 
 @media (max-width: 580px) {
-	.popup__user-description {
-		max-width: 238px;
-		margin-top: 30px;
-	}
+  .popup__user-description {
+    max-width: 238px;
+    margin-top: 30px;
+  }
 }
