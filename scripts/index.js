@@ -6,8 +6,8 @@ const userJob = document.querySelector('.profile__user-description'); // "о с�
 
 const formElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
 // Находим поля формы в DOM
-const nameInput = document.querySelector('.popup__user-name'); // Воспользуйтесь инструментом .querySelector()
-const jobInput = document.querySelector('.popup__user-description'); // Воспользуйтесь инструментом .querySelector()\
+const nameInput = document.querySelector('.popup__input_user-name'); // Воспользуйтесь инструментом .querySelector()
+const jobInput = document.querySelector('.popup__input_user-description'); // Воспользуйтесь инструментом .querySelector()\
 
 function openPopup() {
     popupElement.classList.add('popup_opened');
@@ -20,24 +20,11 @@ function closePopup() {
   }
 
 
-// Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
 function handleFormSubmit (evt) {
-    // Эта строчка отменяет стандартную отправку формы.
-                                                // Так мы можем определить свою логику отправки.
-                                                // О том, как это делать, расскажем позже.
+  userName.textContent = nameInput.value;
+  userJob.textContent = jobInput.value;
+} /*если удалить эту функцию не открыватеся попап*/
 
-    // Получите значение полей jobInput и nameInput из свойства value
-    userName.textContent = nameInput.value;
-    userJob.textContent = jobInput.value;
-
-    // Выберите элементы, куда должны быть вставлены значения полей
-
-    // Вставьте новые значения с помощью textContent
-}
-
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
 
 function handleFormSubmit (evt) {
   evt.preventDefault();
