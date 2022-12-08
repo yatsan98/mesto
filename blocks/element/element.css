@@ -1,6 +1,5 @@
 .element {
   width: 282px;
-  min-height: 361px;
   display: grid;
   grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr min-content;

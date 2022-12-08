@@ -4,11 +4,13 @@
   column-gap: 18px;
   row-gap: 7px;
   align-items: baseline;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
   .profile__info {
-    grid-template-areas: "user-name edit-profile" "descr descr";
+    grid-template-areas: "null null user-name edit-profile" "null null descr descr";
     margin: 26px auto 36px;
+    column-gap: 10px;
   } 
 }

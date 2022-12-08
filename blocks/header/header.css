@@ -2,8 +2,9 @@
   padding: 45px 0 41px;
   margin: 0 auto;
   max-width: 880px;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, 1);;
   position: relative;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 980px) {
@@ -12,9 +13,9 @@
   }
 }
 
-@media screen and (max-width: 535px) {
+@media screen and (max-width: 680px) {
   .header {
-    width: 282px;
-    padding: 28px 27px 0;
+    width: 320px;
+    padding: 28px 27px 30px;
   }
 }

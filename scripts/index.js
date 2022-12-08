@@ -1,14 +1,13 @@
 const popupElement = document.querySelector('.popup'); // popup
-const editProfile = document.querySelector('.profile__edit-profile'); // открыть редактор профиля
-const closeButton = document.querySelector('.popup__close-button'); // закрыть редактор профиля
+const buttonEdit = document.querySelector('.profile__edit-profile'); // открыть редактор профиля
+const buttonClose = document.querySelector('.popup__close-button'); // закрыть редактор профиля
 const userName = document.querySelector('.profile__user-name'); // имя профиля на странице
 const userJob = document.querySelector('.profile__user-description'); // "о себе" на странице
-const saveButton = document.querySelector('.popup__save-button'); // кнопка сохранить
 
-let formElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
+const formElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
 // Находим поля формы в DOM
-let nameInput = document.querySelector('.popup__user-name'); // Воспользуйтесь инструментом .querySelector()
-let jobInput = document.querySelector('.popup__user-description'); // Воспользуйтесь инструментом .querySelector()\
+const nameInput = document.querySelector('.popup__user-name'); // Воспользуйтесь инструментом .querySelector()
+const jobInput = document.querySelector('.popup__user-description'); // Воспользуйтесь инструментом .querySelector()\
 
 function openPopup() {
     popupElement.classList.add('popup_opened');
@@ -24,7 +23,7 @@ function closePopup() {
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
 function handleFormSubmit (evt) {
-    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
+    // Эта строчка отменяет стандартную отправку формы.
                                                 // Так мы можем определить свою логику отправки.
                                                 // О том, как это делать, расскажем позже.
 
@@ -48,6 +47,5 @@ function handleFormSubmit (evt) {
 }
 
 formElement.addEventListener('submit', handleFormSubmit); 
-editProfile.addEventListener('click', openPopup);
-closeButton.addEventListener('click', closePopup);
-editProfile.addEventListener('submit', handleFormSubmit);
+buttonEdit.addEventListener('click', openPopup);
+buttonClose.addEventListener('click', closePopup);

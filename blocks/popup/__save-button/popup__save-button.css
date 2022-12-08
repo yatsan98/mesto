@@ -10,7 +10,7 @@
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  margin: 48px auto 0;
+  margin: 48px auto 37px;
   cursor: pointer;
   padding: 0;
 }
@@ -21,10 +21,10 @@
 
 @media (max-width: 580px) {
   .popup__save-button {
-	width: 238px;
-	height: 46px;
-	font-size: 14px;
-	line-height: 17px;
-	margin-top: 45px;
+	  width: 238px;
+	  height: 46px;
+	  font-size: 14px;
+	  line-height: 17px;
+	  margin: 45px auto 25px;
   }
 }

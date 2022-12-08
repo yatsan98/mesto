@@ -1,11 +1,11 @@
 .popup {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: fixed;
-  top: 30px;
-  left: 2px;
-  right: 0;
+  width: 100%;
+  top: 0px;
   bottom: 0;
 }

@@ -17,54 +17,54 @@
       <div class="profile__info">
         <h1 class="profile__user-name">Жак-Ив Кусто</h1>
         <p class="profile__user-description">Исследователь океана</p> 
-        <button class="button edit-profile profile__edit-profile" type="button"></button>      
+        <button class="button profile__edit-profile" type="button"></button>      
       </div>
-      <button class="button add-button profile__add-button" type="button"></button>
+      <button class="button profile__add-button" type="button"></button>
     </section>
     <!-- Блок elements -->
     <section class="elements">
-      <div class="element">
-        <img class="element__card" src="./images/Dombai.png" alt="Фото">
+      <article class="element">
+        <img class="element__card" src="./images/Dombai.jpg" alt="Горы, природа Домбая">
         <div class="element__text">
           <h2 class="element__title">Домбай</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__card" src="./images/Elbrus-mountain.png" alt="Фото">
+      </article>
+      <article class="element">
+        <img class="element__card" src="./images/Elbrus-mountain.jpg" alt="Гора Эльбрус издалека через долину">
         <div class="element__text">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__card" src="./images/Karachaevo-Cherkesiia.jpg" alt="Фото">
+      </article>
+      <article class="element">
+        <img class="element__card" src="./images/Karachaevo-Cherkesiia.jpg" alt="Старинная крепость на фоне гор">
         <div class="element__text">
           <h2 class="element__title">Карачаево-Черкессия</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__card" src="./images/Baikal.jpg" alt="Фото">
+      </article>
+      <article class="element">
+        <img class="element__card" src="./images/Baikal.jpg" alt="Побережье озера Байкал с деревом на переднем плане">
         <div class="element__text">
           <h2 class="element__title">Байкал</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__card" src="./images/Everest.jpg" alt="Фото">
+      </article>
+      <article class="element">
+        <img class="element__card" src="./images/Everest.jpg" alt="Снежные вершины горы Эверест">
         <div class="element__text">
           <h2 class="element__title">Гора Эверест</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__card" src="./images/Sachalin.jpg" alt="Фото">
+      </article>
+      <article class="element">
+        <img class="element__card" src="./images/Sachalin.jpg" alt="Природа Сахалина, море, гора">
         <div class="element__text">
           <h2 class="element__title">Сахалин</h2>
-          <button class="element__card-like" type="button"></button>
+          <button class="element__card-like" type="button" aria-label="like"></button>
         </div>
-      </div>
+      </article>
     </section>
   </main>
   <!-- Блок footer -->
@@ -74,15 +74,15 @@
 
   <!-- Блок popup -->
   <div class="popup">
-    <section class="popup__container">
-      <button class="popup__close-button"></button>
-      <form class="popup__form">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button"></button>
+      <form class="popup__form" method="post" name="form-popup">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input class="popup__user-name" type="text" name="user-name">
-        <input class="popup__user-description" type="text" name="user-description">
+        <input class="popup__input popup__user-name" type="text" name="user-name">
+        <input class="popup__input popup__user-description" type="text" name="user-description">
         <button class="popup__save-button" type="submit">Сохранить</button>
       </form>
-    </section>
+    </div>
   </div>
   <script src="./scripts/index.js"></script>
 </body>
