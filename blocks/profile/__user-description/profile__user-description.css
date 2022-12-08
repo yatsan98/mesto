@@ -4,7 +4,7 @@
   line-height: 22px;
   grid-area: descr;
   padding: 0;
-  margin: 0 ;
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
