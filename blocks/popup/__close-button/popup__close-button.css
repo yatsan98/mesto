@@ -29,17 +29,17 @@
 
 @media (max-width: 580px) {
   .popup__close-button {
-	  right: -5px;
-	  top: -37px;
+    right: -5px;
+    top: -37px;
   }
 
   .popup__close-button::before {
-  	height: 21px;
-  	border: 1px solid #fff;
+    height: 21px;
+    border: 1px solid #fff;
   }
 
   .popup__close-button::after {
-	  height: 21px;
-	  border: 1px solid #fff;
+    height: 21px;
+    border: 1px solid #fff;
   }
 }
