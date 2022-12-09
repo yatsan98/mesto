@@ -6,8 +6,8 @@ const userJob = document.querySelector('.profile__user-description'); // "о с�
 
 const formElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
 // Находим поля формы в DOM
-const nameInput = document.querySelector('.popup__user-name'); // Воспользуйтесь инструментом .querySelector()
-const jobInput = document.querySelector('.popup__user-description'); // Воспользуйтесь инструментом .querySelector()\
+const nameInput = document.querySelector('[id=name-input]'); // Воспользуйтесь инструментом .querySelector()
+const jobInput = document.querySelector('[id=about-input]'); // Воспользуйтесь инструментом .querySelector()\
 
 function openPopup() {
     popupElement.classList.add('popup_opened');
@@ -20,10 +20,6 @@ function closePopup() {
   }
 
 
-function handleFormSubmit (evt) {
-  userName.textContent = nameInput.value;
-  userJob.textContent = jobInput.value;
-} /*если удалить эту функцию не открыватеся попап*/
 
 
 function handleFormSubmit (evt) {
