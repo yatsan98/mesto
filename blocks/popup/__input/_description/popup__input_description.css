@@ -1,19 +1,18 @@
-.popup__input_user-name {
+.popup__input_description {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.2);
   max-width: 358px;
   padding: 0 0 9px;
-  margin: 54px auto 0;
+  margin: 29px auto 0;
   width: 100%;
   outline: none;
   font-size: 14px;
-  line-height: 17px;
 }
 
 @media (max-width: 580px) {
-  .popup__input_user-name {
+  .popup__input_description {
     max-width: 238px;
-    margin-top: 75px;
+    margin-top: 30px;
   }
 }
