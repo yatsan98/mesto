@@ -9,6 +9,7 @@ const formElement = document.querySelector('.popup__form'); // Воспольз�
 const nameInput = document.querySelector('[id=name-input]'); // Воспользуйтесь инструментом .querySelector()
 const jobInput = document.querySelector('[id=about-input]'); // Воспользуйтесь инструментом .querySelector()
 
+// Функция открытия попап
 function openPopup() {
   popupElement.classList.add('popup_opened');
   nameInput.value = userName.textContent;
@@ -18,7 +19,6 @@ function openPopup() {
 function closePopup() {
   popupElement.classList.remove('popup_opened');
 }
-
 
 function handleFormSubmit (evt) {
   evt.preventDefault();
@@ -32,21 +32,9 @@ buttonEdit.addEventListener('click', openPopup);
 buttonClose.addEventListener('click', closePopup);
 
 
-const popupAdd = document.querySelector ('.popup_add-card'); // добавить фотографию
-const buttonCardAdd = document.querySelector('.profile__add-button'); 
-const popupCardClose = document.querySelector('.popup__close-button');
-const popupCardSave = document.querySelector('.popup__save-button');
-
-function toggleAddPopup() {
-  popupAdd.classList.toggle('popup_add-active');
-}
-
-function addForm() {
-  toggleAddPopup();
-}
-
-buttonCardAdd.addEventListener('click', addForm);
-popupCardClose.addEventListener('click', toggleAddPopup);
+let popupAddCard = document.querySelector ('.popup_add-card'); // попап добавить фотографию
+let buttonCardAdd = document.querySelector('.profile__add-button'); 
+let popupCardSave = document.querySelector('.popup__save-button');
 
 const initialCards = [
   {
@@ -75,9 +63,36 @@ const initialCards = [
   }
 ];
 
+const imagePopup = document.querySelector('.popup_type_image');
+const closeImagePopup = imagePopup.querySelector('.popup__close-button');
+const cardTitle = document.querySelector('.popup__image-container');
 
-const toggleLikeButton = (e) => {
-  e.target.classList.toggle('element__card-like-active');
+function openImagePopup(element, link) {
+  const imageTitle = element.querySelector('.popup__image-title').textContent;
+  imagePopup.src = link;
+  imagePopup.alt = imageTitle;
+  openPopup(imagePopup);
+}
+
+closeImagePopup.addEventListener('click', () => {
+  closePopup(imagePopup);
+})
+
+
+function addForm() {
+  popupElement.classList.add('popup_opened');
+}
+
+function closeForm() {
+  popupElement.classList.remove('popup_opened');
+}
+
+
+buttonCardAdd.addEventListener('click', addForm);
+buttonClose.addEventListener('click', closeForm);
+
+const toggleLikeButton = (evt) => {
+  evt.target.classList.toggle('element__card-like-active');
 }
 
 const addCardElement = (caption, imageLink) => {
@@ -85,9 +100,11 @@ const addCardElement = (caption, imageLink) => {
   const cardElement = elementTemplate.cloneNode(true);
   cardElement.querySelector('.element__card').src = imageLink;
   cardElement.querySelector('.element__title').textContent = caption;
+
   const cardElementsList = document.querySelector('.elements__list');
   cardElementsList.prepend(cardElement);
   document.querySelector('.element__card-like').addEventListener('click', toggleLikeButton);
+  return cardTitle
 }
 
 const addCards = (array) => {
@@ -97,41 +114,13 @@ const addCards = (array) => {
 }
 addCards(initialCards);
 
-const addSubmitHandler = (e) => {
-  e.preventDefault();
+const addSubmitHandler = (evt) => {
+  evt.preventDefault();
   const newCardElementName = document.getElementById('#name').value;
   const newCardElementLink = document.getElementById('#link').value;
   addCardElement(newCardElementName, newCardElementLink);
   toggleAddPopup();
 }
-
-/*const placesContainer = document.querySelector(".elements");
-const placeTemplate = document.querySelector("#card-elements").content;
-
-const placeInfo = initialCards.map(function (item) {
-  return {
-    name: item.name,
-    link: item.link
-  };
-});
-
-function render() {
-  placeInfo.forEach(renderCard);
-}
-
-function renderCard({ name, link }) {
-  const placeElement = placeTemplate
-    .querySelector(".element")
-    .cloneNode(true);
-  placeElement.querySelector(".element__title").textContent = name;
-  placeElement.querySelector(".element__card").src = link;
-
-  placesContainer.prepend(placeElement);
-}
-
-render();*/
-
-
 
 function closePopupAddCard() {
   popupElement.classList.remove('.popup_add-card');

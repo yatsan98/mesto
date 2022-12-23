@@ -6,13 +6,7 @@
   list-style-type: none;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 282px;
-  /*width: 282px;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  grid-template-columns: 1fr min-content;
-  grid-template-areas: "card card" "text like";
-  margin: 0 auto;*/
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {

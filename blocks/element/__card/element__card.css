@@ -1,10 +1,4 @@
 .element__card {
   width: 282px;
   height: 282px;
-  margin: 0;
-  padding: 0;
-    /*grid-area: card;
-  border-radius: 10px 10px 0 0;
-  box-sizing: border-box;
-  width: 100%;*/
 }

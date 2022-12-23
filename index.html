@@ -31,8 +31,8 @@
     <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
   </footer>
 
-  <!-- Блок popup -->
-  <div class="popup">
+  <!-- Блок popup Редактировать профиль -->
+  <div class="popup popup__edit-profile">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
       <form class="popup__form" method="post" name="form-popup">
@@ -43,17 +43,27 @@
       </form>
     </div>
   </div>
-  <div class="popup_add-card">
+  <!-- Блок popup Добавить картинку -->
+  <div class="popup popup_add-card">
     <div class="popup__container">
-      <h3 class="popup__title">Новое место</h3>
       <button class="popup__close-button" type="button"></button>
-      <form class="popup__form" name="add-card-form">        
+      <form class="popup__form" method="post" name="form-popup">        
+        <h3 class="popup__title">Новое место</h3>
         <input id="card-name" class="popup__info-input" placeholder="Название" name="card-add">
         <input id="card-link" class="popup__info-input" placeholder="Ссылка на картинку" required="">
         <button class="popup__save-button" type="submit">Создать</button>
       </form>
     </div>
   </div>
+  <!-- Блок popup Увеличение картинки -->
+  <div class="popup popup_type_image">
+    <div class="popup__image-container">
+      <img class="popup__image">
+      <h3 class="popup__image-title"></h3>
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
+  
   <template id="card-elements">
     <li class="element">
       <img class="element__card" id="image">
