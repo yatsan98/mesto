@@ -15,8 +15,8 @@
     <section class="profile">
       <img class="profile__avatar" src="./images/profile-avatar.jpg" alt="Фото профиля">
       <div class="profile__info">
-        <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-        <p class="profile__user-description">Исследователь океана</p> 
+        <h1 class="profile__user-name" placeholder="Ваше имя">Жак-Ив Кусто</h1>
+        <p class="profile__user-description" placeholder="Ваш вид деятельности" >Исследователь океана</p> 
         <button class="button profile__edit-button" type="button"></button>      
       </div>
       <button class="button profile__add-button" type="button"></button>
@@ -36,8 +36,8 @@
       <button class="popup__close-button" type="button" id="close-button-edit"></button>
       <form class="popup__form" method="post" name="profile">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input id="name-input" class="popup__info-input" type="text" name="user-name">
-        <input id="about-input" class="popup__info-input" type="text" name="user-description">
+        <input id="name-input" class="popup__info-input" type="text" name="user-name" placeholder="Название">
+        <input id="about-input" class="popup__info-input" type="text" name="user-description" placeholder="Ссылка на картинку">
         <button class="popup__save-button" id="save_profile_button">Сохранить</button>
       </form>
     </div>

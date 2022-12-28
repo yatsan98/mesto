@@ -1,29 +1,26 @@
 const popupElement = document.querySelector('.popup'); // popup
 const buttonClose = document.querySelector('.popup__close-button'); // закрыть редактор профиля
-const formElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
+const popupFormElement = document.querySelector('.popup__form'); // Воспользуйтесь методом querySelector()
 // Попап редактировать профиль
-const nameInput = document.querySelector('[id=name-input]'); 
-const jobInput = document.querySelector('[id=about-input]'); // Воспользуйтесь инструментом .querySelector()\
+const nameInputPopupAdd = document.querySelector('[id=name-input]'); 
+const jobInputPopupAdd = document.querySelector('[id=about-input]'); // Воспользуйтесь инструментом .querySelector()\
 const popupEditProfile = document.querySelector('#edit-profile'); // Редактор профиля
 const buttonEditProfile = document.querySelector('.profile__edit-button'); // открыть редактор профиля
-const userName = document.querySelector('.profile__user-name'); // имя профиля на странице
-const userJob = document.querySelector('.profile__user-description'); // "о себе" на странице
-const buttonCloseEdit = document.querySelector('#close-button-edit');
+const userNameProfile = document.querySelector('.profile__user-name'); // имя профиля на странице
+const userJobProfile = document.querySelector('.profile__user-description'); // "о себе" на странице
 // Попап увеличение карточек
 const imagePopup = document.querySelector('#type-image');
 const imageCard = document.querySelector('.popup__image');
 const imagePopupClose = document.querySelector('#image-close');
 const imageName = document.querySelector('.popup__image-title');
-
+// Попап добавление карточек
 const elementsContainer = document.querySelector('.elements');
 const buttonAddCard = document.querySelector('.profile__add-button'); 
-// Попап добавление карточек
 const popupAddCard = document.querySelector ('#add-card'); // попап добавить карточку
-const popupNameCard = document.querySelector('#card-name');
-const popupLinkCard = document.querySelector('#card-link');
-const popupFormAdd = document.querySelector('.popup__form_add_card');
-const buttonCloseAdd = popupAddCard.querySelector('#close-button-add');
-const likeButton = document.querySelector('.element__card-like_active');
+const popupNameAddCard = document.querySelector('#card-name');
+const popupLinkAddCard = document.querySelector('#card-link');
+const popupFormAddCard = document.querySelector('.popup__form_add_card');
+const buttonClosePopupAddCard = popupAddCard.querySelector('#close-button-add');
 // Массив с карточками
 const initialCards = [
   {
@@ -51,10 +48,12 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
+
 // функция открытия попапов
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
 };
+
 // функция закрытия попапов
 const closePopup = function (popup) {
   popup.classList.remove('popup_opened');
@@ -62,14 +61,14 @@ const closePopup = function (popup) {
 
 function handleFormSubmit (evt) {
   evt.preventDefault();
-  userName.textContent = nameInput.value;
-  userJob.textContent = jobInput.value;
+  userNameProfile.textContent = nameInputPopupAdd.value;
+  userJobProfile.textContent = jobInputPopupAdd.value;
   closePopup (popupEditProfile);
 };
 
 buttonEditProfile.addEventListener('click', function () {
-  nameInput.value = userName.textContent;
-  jobInput.value = userJob.textContent;
+  nameInputPopupAdd.value = userNameProfile.textContent;
+  jobInputPopupAdd.value = userJobProfile.textContent;
   openPopup(popupEditProfile);
 });
 
@@ -77,22 +76,19 @@ buttonClose.addEventListener('click', function () {
   closePopup(popupEditProfile);
 });
 
-formElement.addEventListener('submit', handleFormSubmit); 
-
+popupFormElement.addEventListener('submit', handleFormSubmit); 
 
 // добавления карточек
 buttonAddCard.addEventListener('click', () => openPopup(popupAddCard));
 
-const submitAddCard = (evt) => {
+const submitAddNewCard = (evt) => {
     evt.preventDefault();
-    renderCard({name:popupNameCard.value,link:popupLinkCard.value});
+    renderCard({name:popupNameAddCard.value,link:popupLinkAddCard.value});
     evt.target.reset();
     closePopup(popupAddCard);
-    buttonCloseAdd.addEventListener('click', () => closePopup(popupEditProfile));
 };
 
-popupFormAdd.addEventListener('submit', submitAddCard);
-
+popupFormAddCard.addEventListener('submit', submitAddNewCard);
 
 const deleteCard = (evt) => {
   evt.target.closest('.element').remove();
@@ -113,14 +109,14 @@ const createCard = (elementCard) => {
   title.textContent = elementCard.name;
   link.setAttribute('src', `${elementCard.link}`);
   link.setAttribute('alt', `${elementCard.name}`);
+  
   // удалить карточку
   const imageDelete = newCard.querySelector('.element__card-delete');
   imageDelete.addEventListener('click', deleteCard);
-  // закрыть карточку
-  imagePopupClose.addEventListener('click', () => closePopup(imagePopup));
+
   // лайк на карточку
-  const likeButton = newCard.querySelector('.element__card-like');
-  likeButton.addEventListener('click', likeCard);
+  const buttonLikeCard  = newCard.querySelector('.element__card-like');
+  buttonLikeCard .addEventListener('click', likeCard);
  
   link.addEventListener('click', function () {
     imageName.textContent = elementCard.name;
@@ -132,6 +128,9 @@ const createCard = (elementCard) => {
   return newCard;
 };
 
+// закрыть карточку
+imagePopupClose.addEventListener('click', () => closePopup(imagePopup));
+
 const renderCard = (elementCard) => {
   elementsContainer.prepend(createCard(elementCard));
 };
@@ -140,16 +139,6 @@ initialCards.forEach((elementCard) => {
   renderCard(elementCard);
 });
 
-const addCards = (array) => {
-  array.forEach((item) => {
-    addCardElement(item.name, item.link);
-  })
-};
-
-function closePopupAdd(popup) {
-  popup.classList.remove('popup_opened');
-};
-
-buttonCloseAdd.addEventListener('click', function () {
+buttonClosePopupAddCard.addEventListener('click', function () {
   closePopup(popupAddCard);
 })
