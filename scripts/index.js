@@ -106,7 +106,6 @@ const likeCard = (evt) => {
 // добавить новую карточку
 const elementTemplate = document.querySelector('#card-elements').content.querySelector('.element');
 
-
 const createCard = (elementCard) => {
   const newCard = elementTemplate.cloneNode(true);
   const title = newCard.querySelector('.element__title');
@@ -128,7 +127,7 @@ const createCard = (elementCard) => {
     imageCard.src = elementCard.link;
     imageCard.alt = elementCard.name;
     openPopup(imagePopup);
-  })
+  });
 
   return newCard;
 };

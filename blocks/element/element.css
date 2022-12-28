@@ -4,4 +4,12 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  width: 282px;
+}
+
+@media screen and (max-width: 680px) {
+  .element {
+    margin: auto;
+    align-items: center;
+  }
 }

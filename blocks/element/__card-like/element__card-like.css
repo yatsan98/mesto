@@ -15,8 +15,8 @@
   opacity: .5;
   cursor: pointer;
 }
-
+/*
 .element__card-like:active {
   opacity: 1;
   background-image: url('../../../images/icon_like_active.svg');
-}
+}*/
