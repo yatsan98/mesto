@@ -17,13 +17,12 @@
       <div class="profile__info">
         <h1 class="profile__user-name">Жак-Ив Кусто</h1>
         <p class="profile__user-description">Исследователь океана</p> 
-        <button class="button profile__edit-profile" type="button"></button>      
+        <button class="button profile__edit-button" type="button"></button>      
       </div>
       <button class="button profile__add-button" type="button"></button>
     </section>
     <!-- Блок elements -->
     <section class="elements" aria-label="Фотографии">
-      <ul class="elements__list"></ul>
     </section>
   </main>
   <!-- Блок footer -->
@@ -32,47 +31,47 @@
   </footer>
 
   <!-- Блок popup Редактировать профиль -->
-  <div class="popup popup__edit-profile">
+   <div class="popup" id="edit-profile">
     <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
-      <form class="popup__form" method="post" name="form-popup">
+      <button class="popup__close-button" type="button" id="close-button-edit"></button>
+      <form class="popup__form" method="post" name="profile">
         <h3 class="popup__title">Редактировать профиль</h3>
         <input id="name-input" class="popup__info-input" type="text" name="user-name">
         <input id="about-input" class="popup__info-input" type="text" name="user-description">
-        <button class="popup__save-button" type="submit">Сохранить</button>
+        <button class="popup__save-button" id="save_profile_button">Сохранить</button>
       </form>
     </div>
   </div>
   <!-- Блок popup Добавить картинку -->
-  <div class="popup popup_add-card">
+  <div class="popup" id="add-card">
     <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
-      <form class="popup__form" method="post" name="form-popup">        
+      <button class="popup__close-button" type="button" id="close-button-add"></button>
+      <form class="popup__form popup__form_add_card" method="post" name="card">        
         <h3 class="popup__title">Новое место</h3>
         <input id="card-name" class="popup__info-input" placeholder="Название" name="card-add">
         <input id="card-link" class="popup__info-input" placeholder="Ссылка на картинку" required="">
-        <button class="popup__save-button" type="submit">Создать</button>
+        <button class="popup__save-button" id="save_card_button">Создать</button>
       </form>
     </div>
   </div>
   <!-- Блок popup Увеличение картинки -->
-  <div class="popup popup_type_image">
+  <div class="popup" id="type-image">
     <div class="popup__image-container">
       <img class="popup__image">
       <h3 class="popup__image-title"></h3>
-      <button class="popup__close-button" type="button"></button>
+      <button class="popup__close-button" type="button" id="image-close"></button>
     </div>
   </div>
   
   <template id="card-elements">
-    <li class="element">
+    <article class="element">
       <img class="element__card" id="image">
       <button class="element__card-delete" type="button"></button>
       <div class="element__text">
         <h3 class="element__title"></h3>
         <button class="element__card-like" type="button"></button>
       </div>
-    </li>
+    </article>
   </template>
   <script src="./scripts/index.js"></script>
 </body>

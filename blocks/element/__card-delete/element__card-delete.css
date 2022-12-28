@@ -1,11 +1,12 @@
 .element__card-delete {
-  position: absolute;
-  background-image: url('../../../images/trash.svg');
   width: 18px;
   height: 19px;
+  position: absolute;
+  background-image: url('../../../images/trash.svg');
+  background-size: 18px 19px;
   border: none;
   background-color: transparent;
-  padding: 0;
+  background-position: center;
   top: 20px;
   right: 20px;
   transition: .7s ease;
@@ -14,4 +15,8 @@
 .element__card-delete:hover {
   opacity: .6;
   cursor: pointer;
+}
+
+@media screen and (maxwidth) {
+  
 }

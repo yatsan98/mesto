@@ -1,4 +1,8 @@
 .element__card {
   width: 282px;
   height: 282px;
+  transition: .2s linear;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
