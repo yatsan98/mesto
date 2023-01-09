@@ -54,10 +54,32 @@ const initialCards = [
 // функция открытия попапов
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');
+
+  document.addEventListener('keydown', closePopupByKey)
+  document.addEventListener('mousedown', handleExitPopup)
 };
 // функция закрытия попапов
 const closePopup = function (popup) {
   popup.classList.remove('popup_opened');
+
+  document.removeEventListener('keydown', closePopupByKey)
+  document.removeEventListener('mousedown', handleExitPopup)
+};
+
+// функция закрытия попап Esc 
+function closePopupByKey(evt) {
+  
+  if(evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+};
+
+function handleExitPopup(evt) {
+  const openedPopup = document.querySelector('.popup_opened');
+  if((evt.target.classList.contains('popup_opened')) || (evt.target.classList.contains('popup__close-button'))) {
+    closePopup(openedPopup);
+  }
 };
 
 function handleFormSubmit (evt) {
@@ -152,4 +174,18 @@ function closePopupAdd(popup) {
 
 buttonCloseAdd.addEventListener('click', function () {
   closePopup(popupAddCard);
-})
+});
+
+
+
+// включить валидацию
+
+const validationConfig = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__info-input',
+  submitButtonSelector: '.popup__save-button',
+  inactiveButtonClass: 'popup__save-button_disabled',
+  errorClass: 'popup__info-input-error_visible'
+}; 
+
+enableValidation(validationConfig);
