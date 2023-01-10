@@ -1,4 +1,5 @@
-.popup__info-input {
+.popup__input {
+  display: block;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -12,7 +13,7 @@
 }
 
 @media (max-width: 580px) {
-  .popup__info-input {
+  .popup__input {
     max-width: 238px;
     margin-top: 30px;
   }
