@@ -21,33 +21,6 @@ const popupNameAddCard = document.querySelector('#card-name');
 const popupLinkAddCard = document.querySelector('#card-link');
 const popupFormAddCard = document.querySelector('.popup__form_add_card');
 const buttonClosePopupAddCard = popupAddCard.querySelector('#close-button-add');
-// Массив с карточками
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 // функция открытия попапов
 const openPopup = function (popup) {
@@ -157,7 +130,7 @@ const renderCard = (elementCard) => {
   elementsContainer.prepend(createCard(elementCard));
 };
 
-initialCards.forEach((elementCard) => {
+constants.forEach((elementCard) => {
   renderCard(elementCard);
 });
 
