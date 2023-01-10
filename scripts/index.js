@@ -176,16 +176,3 @@ buttonCloseAdd.addEventListener('click', function () {
   closePopup(popupAddCard);
 });
 
-
-
-// включить валидацию
-
-const validationConfig = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__info-input',
-  submitButtonSelector: '.popup__save-button',
-  inactiveButtonClass: 'popup__save-button_disabled',
-  errorClass: 'popup__info-input-error_visible'
-}; 
-
-enableValidation(validationConfig);

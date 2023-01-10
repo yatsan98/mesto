@@ -34,13 +34,13 @@
    <div class="popup" id="edit-profile">
     <div class="popup__container">
       <button class="popup__close-button" type="button" id="close-button-edit" aria-label="Кнопка закрыть окно"></button>
-      <form name="popupProfileForm" id="popupProfileForm" class="popup__form" method="post" name="profile">
+      <form name="popupProfileForm" id="popupProfileForm" class="popup__form" method="post">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input id="name-input" class="popup__info-input" type="text" name="user-name" minlength="2" maxlength="40" value="" required>
-        <span class="popup__info-input-error" id="titleInput-error"></span>
-        <input id="about-input" class="popup__info-input" type="text" name="user-description" minlength="2" maxlength="200" value="" required>
-        <span class="popup__info-input-error" id="infoInput-error"></span>
-        <button class="popup__save-button popup__save-button_disabled" id="save_profile_button" aria-label="Кнопка Сохранить">Сохранить</button>
+        <input id="name-input" class="popup__input" type="text" name="user-name" minlength="2" maxlength="40" value="" required>
+        <span class="popup__input-error name-input-error"></span>
+        <input id="about-input" class="popup__input" type="text" name="user-description" minlength="2" maxlength="200" value="" required>
+        <span class="popup__input-error about-input-error"></span>
+        <button class="popup__save-button" id="save_profile_button" type="submit" aria-label="Кнопка Сохранить">Сохранить</button>
       </form>
     </div>
   </div>
@@ -50,11 +50,11 @@
       <button class="popup__close-button" type="button" id="close-button-add" aria-label="Кнопка закрыть окно"></button>
       <form class="popup__form popup__form_add_card" method="post" name="card">        
         <h3 class="popup__title">Новое место</h3>
-        <input id="card-name" class="popup__info-input" placeholder="Название" name="card-add" minlength="2" maxlength="30" value="" required>
-        <span class="popup__info-input-error" id="cardName-error"></span>
-        <input id="card-link" class="popup__info-input" placeholder="Ссылка на картинку" name="linkCardAdd" type='url' value="" required>
-        <span class="popup__info-input-error" id="cardLink-error"></span>
-        <button class="popup__save-button popup__save-button_disabled" id="save_card_button" type="submit" aria-label="Кнопка Создать">Создать</button>
+        <input id="card-name" class="popup__input" placeholder="Название" name="card-add" minlength="2" maxlength="30" value="" required>
+        <span class="popup__input-error card-name-error"></span>
+        <input id="card-link" class="popup__input" placeholder="Ссылка на картинку" name="linkCardAdd" type='url' value="" required>
+        <span class="popup__input-error card-link-error"></span>
+        <button class="popup__save-button" id="save_card_button" type="submit" aria-label="Кнопка Создать">Создать</button>
       </form>
     </div>
   </div>
