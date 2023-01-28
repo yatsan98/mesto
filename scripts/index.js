@@ -62,10 +62,10 @@ function handleExitPopup(evt) {
 
 // открыть фото
 function openCardPopup(title, link, alt) {
-  openPopup(imagePopup);
   imageName.textContent = title;
   imageCard.src = link;
   imageCard.image = alt;
+  openPopup(imagePopup);
 }
 
 function submitEditProfileForm (evt) {
@@ -95,8 +95,6 @@ const submitAddNewCard = (evt) => {
     const card = createCard({name:popupNameAddCard.value,
                              link:popupLinkAddCard.value})
     renderCard(card);
-    popupNameAddCard.value = "";
-    popupLinkAddCard.valut = "";
     evt.target.reset();
     closePopup(popupAddCard);
 };

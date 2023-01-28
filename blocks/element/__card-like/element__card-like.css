@@ -1,14 +1,18 @@
 .element__card-like {
+  position: absolute;
   background-image: url('../../../images/icon_like.svg');
   width: 22px;
   height: 19px;
   border: none;
-  margin-right: 18px;
+  right: 20px;
+  bottom: 30px;
+  margin: 0;
   padding: 0;
   background-color: #fff;
-  background-size: contain;
   background-repeat: no-repeat;
   transition: .7s ease;
+  cursor: pointer;
+  background-position: center;
 }
 
 .element__card-like:hover {
